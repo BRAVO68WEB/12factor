@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This repo was created to showcase my 12 Factors of Full Stack Web Development Skills",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api":"cd packages/12f-api && npm run-script start",
+    "blogsite":"cd packages/12f-front && npm run-script start",
+    "start": "concurrently \"npm run api\" \"npm run blogsite\""
   },
   "repository": {
     "type": "git",
@@ -27,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/BRAVO68WEB/12factor/issues"
   },
-  "homepage": "https://github.com/BRAVO68WEB/12factor#readme"
+  "homepage": "https://github.com/BRAVO68WEB/12factor#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0"
+  }
 }
